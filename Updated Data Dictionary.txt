@@ -1,0 +1,513 @@
+# Updated Data Dictionary for Identify Customer Segments Data
+
+## Introduction
+
+This data dictionary provides the feature list and definitions for the
+cleaned and wrangled dataframes used in this project. Please utilize this
+dictionary as reference for any dataframe used after Step 1.3of the project.
+
+### Table of Contents
+
+ 1. Person-level features
+ 2. Household-level features
+ 3. Building-level features
+ 4. RR4 micro-cell features
+ 5. RR3 micro-cell features
+ 6. Postcode-level features
+ 7. RR1 neighborhood features
+ 8. PLZ8 macro-cell features
+ 9. Community-level features
+
+-----
+
+## 1. Person-level features
+
+### 1.1. ALTERSKATEGORIE_GROB
+Estimated age based on given name analysis
+-  1: < 30 years old
+-  2: 30 - 45 years old
+-  3: 46 - 60 years old
+-  4: > 60 years old
+
+### 1.2. ANREDE_KZ
+Gender
+-  0: male
+-  1: female
+
+### 1.5. FINANZ_MINIMALIST, FINANZ_SPARER, FINANZ_VORSORGER, FINANZ_ANLEGER,
+###      FINANZ_UNAUFFAELLIGER, FINANZ_HAUSBAUER
+Financial typology, for each dimension:
+-  1: very high
+-  2: high
+-  3: average
+-  4: low
+-  5: very low
+
+Dimension translations:
+- MINIMALIST: low financial interest
+- SPARER: money-saver
+- VORSORGER: be prepared
+- ANLEGER: investor
+- UNAUFFAELLIGER: inconspicuous
+- HAUSBAUER: home ownership
+
+### 1.6. GEBURTSJAHR
+Year of birth
+
+### 1.7. GREEN_AVANTGARDE
+Membership in environmental sustainability as part of youth
+- 0: not a member of green avantgarde
+- 1: member of green avantgarde
+
+### 1.8. HEALTH_TYP
+Health typology
+-  1: critical reserved
+-  2: sanitary affine  
+-  3: jaunty hedonists
+
+### 1.9. LP_FAMILIE_GROB_1.0, LP_FAMILIE_GROB_2.0, LP_FAMILIE_GROB_3.0,
+###	 LP_FAMILIE_GROB_6.0, LP_FAMILIE_GROB_5.0
+Family type, rough scale
+ - 0: Not in category
+ - 1: In category
+
+Dimension translations:
+- 1.0: single (maps to 1 in fine scale)
+- 2.0: couple (maps to 2 in fine scale)
+- 3.0: single parent (maps to 3-5 in fine scale)
+- 4.0: family (maps to 6-8 in fine scale)
+- 5.0: multiperson household (maps to 9-11 in fine scale)
+
+### 1.10. LP_STATUS_GROB_01, LP_STATUS_GROB_2.0, LP_STATUS_GROB_3.0,
+###	  LP_STATUS_GROB_4.0, LP_STATUS_GROB_5.0
+Social status, rough scale
+ - 0: Not in category
+ - 1: In category
+
+Dimension translations:
+- 1.0: low-income earners
+- 2.0: average earners
+- 3.0: independents
+- 4.0: houseowners
+- 5.0: top earners
+
+### 1.11. NATIONALITAET_KZ_1.0, NATIONALITAET_KZ_2.0, NATIONALITAET_KZ_3.0
+Nationality based on given name analysis
+ - 0: Not in category
+ - 1: In category
+
+Dimension translations:
+-  1.0: German-sounding
+-  2.0: foreign-sounding
+-  3.0: assimilated names
+
+### 1.12. PJ_MOVETYP
+Dominating movement of person's youth (avantgarde vs. mainstream)
+ - 0: Mainstream
+ - 1: Avantgarde
+
+### 1.13. PJ_DECADE
+Dominating movement of person's youth (decade)
+ - 40: 1940s
+ - 50: 1950s
+ - 60: 1960s
+ - 70: 1970s
+ - 80: 1980s
+ - 90: 1990s
+
+### 1.14. RETOURTYP_BK_S
+Return type
+- 1: influenceable Crazy-Shopper
+- 2: demanding Heavy-Returner
+- 3: incentive-receptive Normal-Returner
+- 4: conservative Low-Returner
+- 5: determined Minimal-Returner
+
+### 1.15. SEMIO_SOZ, SEMIO_FAM, SEMIO_REL, SEMIO_MAT, SEMIO_VERT, SEMIO_LUST,
+###       SEMIO_ERL, SEMIO_KULT, SEMIO_RAT, SEMIO_KRIT, SEMIO_DOM, SEMIO_KAEM,
+###       SEMIO_PFLICHT, SEMIO_TRADV
+Personality typology, for each dimension:
+-  1: highest affinity
+-  2: very high affinity
+-  3: high affinity
+-  4: average affinity
+-  5: low affinity
+-  6: very low affinity
+-  7: lowest affinity
+
+Dimension translations:
+- SOZ: socially-minded
+- FAM: family-minded
+- REL: religious
+- MAT: materialistic
+- VERT: dreamful
+- LUST: sensual-minded
+- ERL: event-oriented
+- KULT: cultural-minded
+- RAT: rational
+- KRIT: critical-minded
+- DOM: dominant-minded
+- KAEM: combative attitude
+- PFLICHT: dutiful
+- TRADV: tradional-minded
+
+### 1.16. SHOPPER_TYP_0.0, SHOPPER_TYP_1.0, SHOPPER_TYP_2.0, SHOPPER_TYP_3.0
+Shopper typology
+ - 0: Not in category
+ - 1: In category
+
+Dimension translations:
+-  0.0: external supplied hedonists
+-  1.0: Shopping-stressed
+-  2.0: family-shopper
+-  3.0: demanding shopper
+
+### 1.17. SOHO_KZ
+Small office / home office flag
+- 0: no small office/home office
+- 1: small office/home office
+
+### 1.18. VERS_TYP
+Insurance typology
+-  0: social-safety driven
+-  1: individualistic-accepting risks
+
+### 1.19. ZABEOTYP_1, ZABEOTYP_2, ZABEOTYP_3, ZABEOTYP_4, ZABEOTYP_5
+###	  ZABEOTYP_6
+Energy consumption typology
+ - 0: Not in category
+ - 1: In category
+
+Dimension translations:
+-  1: green
+-  2: smart
+-  3: fair supplied
+-  4: price driven
+-  5: seeking orientation
+-  6: indifferent
+-  9: unknown
+
+-----
+
+## 2. Household-level features
+
+### 2.2. ANZ_PERSONEN
+Number of adults in household
+
+### 2.3. ANZ_TITEL
+Number of professional academic title holders in household
+
+### 2.4. HH_EINKOMMEN_SCORE
+Estimated household net income
+-  1: highest income
+-  2: very high income
+-  3: high income
+-  4: average income
+-  5: lower income
+-  6: very low income
+
+### 2.6. W_KEIT_KIND_HH
+Likelihood of children in household
+-  1: most likely
+-  2: very likely
+-  3: likely
+-  4: average
+-  5: unlikely
+-  6: very unlikely
+
+### 2.7. WOHNDAUER_2008
+Length of residence
+-  1: length of residence less than 1 year
+-  2: length of residence 1-2 years
+-  3: length of residence 2-3 years
+-  4: length of residence 3-4 years
+-  5: length of residence 4-5 years
+-  6: length of residence 5-6 years
+-  7: length of residence 6-7 years
+-  8: length of residence 7-10 years
+-  9: length of residence more than 10 years
+
+-----
+
+## 3. Building-level features
+
+### 3.1. ANZ_HAUSHALTE_AKTIV
+Number of households in the building
+
+### 3.2. ANZ_HH_TITEL
+Number of professional academic title holders in building
+
+### 3.3. GTYP_KNOWN_OCCUPANT
+Whether building has a known occupant
+ - 0: No known occupant
+ - 1: Known occupant
+
+### 3.4. GTYP_RESIDENTIAL, GTYP_COMMERCIAL, GTYP_MIXED_USE
+Type of building (residential vs. commercial VS mixed-use)
+ - 0: Not in category
+ - 1: In category
+
+### 3.4. KONSUMNAEHE
+Distance from building to point of sale (PoS)
+- 1: building is located in a 125 x 125m grid cell (RA1), which is a
+     consumption cell
+- 2: building is located in a 250 x 250m grid cell that includes at least one
+     RA1-consumption cell
+- 3: building is located in a 500 x 500m grid cell that includes at least one
+     RA1-consumption cell
+- 4: building is located in a 1 x 1km grid cell that includes at least one
+     RA1-consumption cell
+- 5: building is located in a 2 x 2km grid cell that includes at least one
+     RA1-consumption cell
+- 6: building is located in a 10 x 10km grid cell that includes at least one
+     RA1-consumption cell
+- 7: building is not located in a 10 x 10km range of a consumption cell
+
+### 3.5. MIN_GEBAEUDEJAHR
+First year building was mentioned in the database
+
+### 3.6. OST_WEST_KZ
+Building location via former East / West Germany (GDR / FRG)
+-  0: East (GDR)
+-  1: West (FRG)
+
+-----
+
+## 4. RR4 micro-cell features
+
+### 4.1. CAMEO_DEUG_2015
+German CAMEO: Wealth / Life Stage Typology, rough(er) scale
+-  1: upper class
+-  2: upper middleclass
+-  3: middle middleclass
+-  4: lower middleclass
+-  5: working class
+
+### 4.2. CI_WEALTH
+German CAMEO: Wealth Typology
+ - 1: Wealthy Households
+ - 2: Prosperous Households
+ - 3: Comfortable Households
+ - 4: Less Affluent Households
+ - 5: Poorer Households
+
+### 4.3 CI_HOUSEHOLD
+German CAMEO: Life Stage Typology
+- 1: Pre-Family Couples & Singles
+- 2: Young Couples With Children
+- 3: Families With School Age Children
+- 4: Older Families & Mature Couples
+- 5: Elders In Retirement
+
+-----
+
+## 5. RR3 micro-cell features
+
+### 5.1. KBA05_ANTG1
+Number of 1-2 family houses in the microcell
+-  0: no 1-2 family homes
+-  1: lower share of 1-2 family homes
+-  2: average share of 1-2 family homes
+-  3: high share of 1-2 family homes
+-  4: very high share of 1-2 family homes
+
+### 5.2. KBA05_ANTG2
+Number of 3-5 family houses in the microcell
+-  0: no 3-5 family homes
+-  1: lower share of 3-5 family homes
+-  2: average share of 3-5 family homes
+-  3: high share of 3-5 family homes
+-  4: very high share of 3-5 family homes
+
+### 5.3. KBA05_ANTG3
+Number of 6-10 family houses in the microcell
+-  0: no 6-10 family homes
+-  1: lower share of 6-10 family homes
+-  2: average share of 6-10 family homes
+-  3: high share of 6-10 family homes
+
+### 5.4. KBA05_ANTG4
+Number of 10+ family houses in the microcell
+-  0: no 10+ family homes
+-  1: lower share of 10+ family homes
+-  2: high share of 10+ family homes
+
+### 5.6. KBA05_GBZ
+Number of buildings in the microcell
+-  1: 1-2 buildings
+-  2: 3-4 buildings
+-  3: 5-16 buildings
+-  4: 17-22 buildings
+-  5: >=23 buildings
+
+-----
+
+## 6. Postcode-level features
+
+### 6.1. BALLRAUM
+Distance to nearest urban center
+-  1: less than 10 km
+-  2: 10 -  20 km
+-  3: 20 -  30 km
+-  4: 30 -  40 km
+-  5: 40 -  50 km
+-  6: 50 - 100 km
+-  7: more than 100 km
+
+### 6.2. EWDICHTE
+Density of households per square kilometer
+-  1: less than 34 households per km^2
+-  2:  34 -  89 households per km^2
+-  3:  90 - 149 households per km^2
+-  4: 150 - 319 households per km^2
+-  5: 320 - 999 households per km^2
+-  6: more than 999 households per km^2
+
+### 6.3. INNENSTADT
+Distance to city center (downtown)
+-  1: in city center
+-  2: less than 3 km to city center
+-  3:  3 -  5 km to city center
+-  4:  5 - 10 km to city center
+-  5: 10 - 20 km to city center
+-  6: 20 - 30 km to city center
+-  7: 30 - 40 km to city center
+-  8: more than 40 km to city center
+
+-----
+
+## 7. RR1 region features
+
+### 7.1. GEBAEUDETYP_RASTER
+Ratio of residential to commercial activity
+- 1: business cell
+- 2: mixed cell with high business share
+- 3: mixed cell with middle business share
+- 4: mixed cell with low business share
+- 5: residential cell
+
+### 7.2. KKK
+Purchasing power in region
+-  1: very high
+-  2: high
+-  3: average
+-  4: low
+
+### 7.3. MOBI_REGIO
+Movement patterns
+- 1: very high movement
+- 2: high movement
+- 3: middle movement
+- 4: low movement
+- 5: very low movement
+
+### 7.4. ONLINE_AFFINITAET
+Online affinity
+- 0: none
+- 1: low
+- 2: middle
+- 3: high
+- 4: very high
+- 5: highest
+
+### 7.5. REGIOTYP
+Neighborhood typology
+-  1: upper class
+-  2: conservatives
+-  3: upper middle class
+-  4: middle class
+-  5: lower middle class
+-  6: traditional workers
+-  7: marginal groups
+
+-----
+
+## 8. PLZ8 macro-cell features
+
+### 8.1. KBA13_ANZAHL_PKW
+Number of cars in the PLZ8 region
+
+### 8.2. PLZ8_ANTG1
+Number of 1-2 family houses in the PLZ8 region
+-  0: no 1-2 family homes
+-  1: lower share of 1-2 family homes
+-  2: average share of 1-2 family homes
+-  3: high share of 1-2 family homes
+-  4: very high share of 1-2 family homes
+
+### 8.3. PLZ8_ANTG2
+Number of 3-5 family houses in the PLZ8 region
+-  0: no 3-5 family homes
+-  1: lower share of 3-5 family homes
+-  2: average share of 3-5 family homes
+-  3: high share of 3-5 family homes
+-  4: very high share of 3-5 family homes
+
+### 8.4. PLZ8_ANTG3
+Number of 6-10 family houses in the PLZ8 region
+-  0: no 6-10 family homes
+-  1: lower share of 6-10 family homes
+-  2: average share of 6-10 family homes
+-  3: high share of 6-10 family homes
+
+### 8.5. PLZ8_ANTG4
+Number of 10+ family houses in the PLZ8 region
+-  0: no 10+ family homes
+-  1: lower share of 10+ family homes
+-  2: high share of 10+ family homes
+
+### 8.6. PLZ8_BAUMAX
+Most common building type within the PLZ8 region
+-  1: mainly 1-2 family homes
+-  2: mainly 3-5 family homes
+-  3: mainly 6-10 family homes
+-  4: mainly 10+ family homes
+-  5: mainly business buildings
+
+### 8.7. PLZ8_HHZ
+Number of households within the PLZ8 region
+-  1: less than 130 households
+-  2: 131-299 households
+-  3: 300-599 households
+-  4: 600-849 households
+-  5: more than 849 households
+
+### 8.8. PLZ8_GBZ
+Number of buildings within the PLZ8 region
+-  1: less than 60 buildings
+-  2:  60-129 buildings
+-  3: 130-299 buildings
+-  4: 300-449 buildings
+-  5: more than 449 buildings
+
+-----
+
+## 9. Community-level features
+
+### 9.1. ARBEIT
+Share of unemployment in community
+-  1: very low
+-  2: low
+-  3: average
+-  4: high
+-  5: very high
+
+### 9.2. ORTSGR_KLS9
+Size of community
+-  1: <= 2,000 inhabitants
+-  2:   2,001 to   5,000 inhabitants
+-  3:   5,001 to  10,000 inhabitants
+-  4:  10,001 to  20,000 inhabitants
+-  5:  20,001 to  50,000 inhabitants
+-  6:  50,001 to 100,000 inhabitants
+-  7: 100,001 to 300,000 inhabitants
+-  8: 300,001 to 700,000 inhabitants
+-  9: > 700,000  inhabitants
+
+### 9.3. RELAT_AB
+Share of unemployment relative to county in which community is contained
+-  1: very low
+-  2: low
+-  3: average
+-  4: high
+-  5: very high
